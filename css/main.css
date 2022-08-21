@@ -1,0 +1,363 @@
+/* navbar */
+.navbar_con {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background: #15111608; */
+    width: 100%;
+    /* height: 114px; */
+    padding: 35px 50px;
+    justify-content: space-between;
+    backdrop-filter: blur(25px);
+
+    z-index: 999999;
+}
+
+.siteLogo {
+    width: 15%;
+    margin-right: 120px;
+    justify-content: flex-start;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    word-spacing: -3px;
+}
+
+.siteLogo>a {
+    position: relative;
+}
+
+.siteLogo_subscript {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    font-size: 10px;
+    /* font-weight: 600; */
+    letter-spacing: 14px;
+}
+
+.navbar_menu_con>i {
+    font-size: 3px;
+    color: #ffffff;
+}
+
+.navbar_menu_con {
+    justify-content: space-between;
+    width: 350px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/*  */
+
+
+/* index page */
+.main_header_wrap {
+    background: url('../assests/dataScience.gif') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: calc(100vh - 114px);
+}
+
+.main_header_con {
+    background: #adbdef1a;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    padding-top: 200px;
+    backdrop-filter: blur(150px);
+
+}
+
+.main_header_title {
+    margin-bottom: 50px;
+    color: var(--ftPurple);
+
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 60px;
+    /* line-height: 25px; */
+    background: url('../assests/dataScience.gif');
+    background-size: 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: imagebulger 5s infinite;
+}
+
+.main_header_subtitle {
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: var(--bgPurple);
+    /* letter-spacing: 3px; */
+    word-spacing: 10px;
+    line-height: 25px;
+}
+
+.main_header_btn {
+    background: var(--fullDark);
+    justify-content: space-between;
+    width: 170px;
+    padding: 15px 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.main_header_btn:hover {
+    opacity: 0.8;
+}
+
+.main_header_subRight {
+    /* color: var(--ftLightPurple); */
+
+    /* background: red; */
+    width: 40%;
+    height: 100%;
+}
+
+.main_header_subRight>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*  */
+
+.main_intro_con {
+    margin: 50px 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.main_intro_subLeft {
+    width: 35%;
+    /* margin-right: 50px; */
+    padding: 50px;
+}
+
+.main_intro_subLeft_title {
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.main_intro_subLeft_subtitle {
+    /* margin-bottom: 20px; */
+    font-size: 18px;
+    line-height: 25px;
+}
+
+/* intro_cards */
+.main_intro_subRight {
+    width: 65%;
+}
+
+.main_intro_subRight_cardCon {
+    padding: 50px 0;
+}
+
+.subRight_card {
+    background: var(--bgPurple);
+    margin-right: 50px;
+    width: 250px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.subRight_card_active {
+    background: var(--ftPurple);
+    transform: scale(1.2);
+}
+
+.subRight_card_active>.subRight_card_title,
+.subRight_card_active>.subRight_card_content {
+    color: var(--fullDark) !important;
+}
+
+.subRight_card_icn {
+    background: var(--fullDark);
+    /* background: #000; */
+    margin-bottom: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: var(--ftPurple);
+    border-radius: 10px;
+}
+
+.subRight_card_title {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: var(--ftPurple);
+}
+
+.subRight_card_content {
+    font-size: 18px;
+    color: var(--ftLightPurple);
+}
+
+/*  */
+
+
+/* categories */
+
+.categories_label_wrap {
+    padding: 50px;
+    /* color: var(--ftPurple); */
+}
+
+.categories_label_wrap_title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.categories_label_con {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.categories_label {
+    background: var(--bgPurple);
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.2 ease-in-out;
+}
+
+.categories_label:hover {
+    background: var(--ftPurple);
+    color: var(--fullDark);
+}
+
+.categories_label:hover .categories_label_subRight_title {
+    font-weight: 600;
+}
+
+.categories_label_subLeft {
+    background: var(--fullDark);
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.categories_label_subLeft>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.categories_label_subRight_title {
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.categories_label_subRight_subTitle {
+    font-size: 12px;
+}
+
+
+
+/* data science page */
+.header_wrap {
+    background: url('../assests/dataScience.gif') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* background: #fff; */
+    width: 100%;
+    height: 400px;
+}
+
+.header_con {
+    position: relative;
+    flex-direction: column;
+    background: #adbdef1a;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(150px);
+}
+
+
+h1 {
+    width: 100%;
+    font-family: 'exan', Fallback, sans-serif;
+    font-size: 100px;
+    text-align: center;
+
+    /* text-shadow: 0px 0px 1px #000000; */
+
+
+    background: url('../assests/dataScience.gif');
+    background-size: 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: imagebulger 25s infinite;
+}
+
+@keyframes imagebulger {
+
+    0% {
+        background-size: 60% auto;
+        -webkit-background-size: 60%;
+    }
+
+    100% {
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+}
+
+/* intro */
+.intro_con {
+    padding: 50px;
+    color: var(--ftPurple);
+}
+
+.intro_mini_header {
+    margin-bottom: 30px;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--lightPurple);
+    font-weight: 100;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+}
+
+.intro_header {
+    margin-bottom: 30px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 35px;
+}
+
+.intro_content {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--ftLightPurple);
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+
+/* footer */
+
+.footer_con {
+    background: #0f0d10;
+    padding: 20px 50px;
+    font-size: 13px;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    /* word-spacing: 5px; */
+}
+
+.myPortfolio_link {
+    transition: all 0.2s ease-in-out;
+}
+
+.myPortfolio_link:hover {
+    color: #71fcaa;
+}
