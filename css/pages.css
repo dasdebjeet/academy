@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+
+
+.page_header_wrap {
+    background: url('../assests/dataScience.gif') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* background: #fff; */
+    width: 100%;
+    height: 400px;
+}
+
+.page_header_con {
+    position: relative;
+    flex-direction: column;
+    background: #adbdef1a;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(150px);
+}
+
+
+.page_header_con>h1 {
+    width: 100%;
+    font-family: 'exan', Fallback, sans-serif;
+    font-size: 100px;
+    text-align: center;
+
+    /* text-shadow: 0px 0px 1px #000000; */
+
+
+    background: url('../assests/dataScience.gif');
+    background-size: 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: imagebulger 25s infinite;
+}
+
+@keyframes imagebulger {
+
+    0% {
+        background-size: 60% auto;
+        -webkit-background-size: 60%;
+    }
+
+    100% {
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+}
+
+
+.page_topic_con,
+.page_dataset_con,
+.page_intro_con,
+.page_author_con {
+    padding: 50px;
+    /* padding-bottom: 0; */
+    color: var(--ftPurple);
+}
+
+.page_topic_con {
+    padding-bottom: 0px;
+}
+
+.page_topic_mini_header,
+.page_dataset_mini_header,
+.page_intro_mini_header,
+.page_author_mini_header {
+    margin-bottom: 30px;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--lightPurple);
+    font-weight: 100;
+    font-size: 13px;
+    letter-spacing: -0.3px;
+}
+
+.page_topic_header,
+.page_dataset_link,
+.page_intro_header,
+.page_author_name {
+    margin-bottom: 30px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+}
+
+.page_topic_header {
+    font-size: 35px;
+}
+
+.page_dataset_link {
+    transition: all 0.2s ease-in-out;
+}
+
+.page_dataset_link:hover {
+    color: var(--ftPink);
+}
+
+.page_author_name {
+    width: fit-content;
+    justify-content: flex-start;
+}
+
+.page_author_img {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+
+.page_intro_content {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--ftLightPurple);
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.page_intro_content_para {
+    margin-top: 20px;
+}
+
+.formatted_code {
+    position: relative;
+    background: #110e12;
+    background: var(--bgPurple);
+    justify-content: flex-start;
+    margin: 30px 0;
+    padding: 30px;
+    font-family: 'Ubuntu Mono', monospace;
+    /* color: var(--ftPurple); */
+    white-space: pre-line;
+    /* width:fit-content; */
+    color: #ffffff;
+    overflow-x: auto;
+}
+
+.formatted_code_jupyter_output_con {
+    position: relative;
+    background: #292c365c !important;
+    overflow-x: auto;
+}
+
+/* .formatted_code::before {
+    position: absolute;
+    content: "Input";
+    top: 35px;
+    left: -5px;
+    color: #ffffff;
+    font-size: 15px;
+    transform: rotate(270deg);
+}
+
+.formatted_code_jupyter_output_con::before {
+    position: absolute;
+    content: "Output";
+    top: 35px;
+    left: -5px;
+    color: #ffffff;
+    font-size: 15px;
+    transform: rotate(270deg);
+} */
+
+.dataset_table_veiw {
+    background: #110e12;
+    background: var(--bgPurple);
+    margin: 30px 0;
+    padding: 30px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.dataset_table_veiw table {
+    border-collapse: collapse;
+    background: #00000052;
+    color: #ffffff;
+}
+
+.dataset_table_veiw thead,
+.dataset_table_veiw tr:nth-child(even) {
+    background: #0000008f;
+}
+
+.dataset_table_veiw th,
+.dataset_table_veiw td {
+    min-width: 100px;
+    padding: 5px 10px;
+    text-align: center;
+    /* color:var(); */
+}
+
+.graph_plot_con {
+    background: #110e12;
+    background: var(--bgPurple);
+    margin: 30px 0;
+    padding: 30px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.graph_plot_con>img {
+    max-width: 100%;
+    object-fit: cover;
+}

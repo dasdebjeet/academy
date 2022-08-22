@@ -262,6 +262,21 @@
     font-size: 12px;
 }
 
+/* about */
+.about_con {
+    background: url("../assests/undraw_team_page_re_cffb.svg") no-repeat;
+    background-position: 90%;
+    background-size: contain;
+    padding: 50px;
+
+}
+
+.about_con_title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.about_con_contents {}
 
 /* footer */
 .footer_con {
@@ -332,83 +347,3 @@
 
 
 
-
-/* data science page */
-.header_wrap {
-    background: url('../assests/dataScience.gif') no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    /* background: #fff; */
-    width: 100%;
-    height: 400px;
-}
-
-.header_con {
-    position: relative;
-    flex-direction: column;
-    background: #adbdef1a;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(150px);
-}
-
-
-h1 {
-    width: 100%;
-    font-family: 'exan', Fallback, sans-serif;
-    font-size: 100px;
-    text-align: center;
-
-    /* text-shadow: 0px 0px 1px #000000; */
-
-
-    background: url('../assests/dataScience.gif');
-    background-size: 50%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: imagebulger 25s infinite;
-}
-
-@keyframes imagebulger {
-
-    0% {
-        background-size: 60% auto;
-        -webkit-background-size: 60%;
-    }
-
-    100% {
-        background-size: 100% auto;
-        -webkit-background-size: 100%;
-    }
-}
-
-/* intro */
-.intro_con {
-    padding: 50px;
-    color: var(--ftPurple);
-}
-
-.intro_mini_header {
-    margin-bottom: 30px;
-    font-family: 'Share Tech Mono', monospace;
-    color: var(--lightPurple);
-    font-weight: 100;
-    font-size: 13px;
-    letter-spacing: -0.3px;
-}
-
-.intro_header {
-    margin-bottom: 30px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 35px;
-}
-
-.intro_content {
-    font-family: 'Share Tech Mono', monospace;
-    color: var(--ftLightPurple);
-    font-weight: 100;
-    font-size: 15px;
-    line-height: 25px;
-}
