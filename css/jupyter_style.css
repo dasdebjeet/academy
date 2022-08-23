@@ -1,0 +1,111 @@
+.jp-InputArea-prompt,
+.jp-OutputArea-prompt {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.jp-Notebook-cell,
+.jp-Cell-outputWrapper {
+    margin: 50px 0;
+}
+
+.jp-MarkdownCell {
+    margin: 50px 0 30px !important;
+}
+
+.highlight {
+    background: var(--bgPurple);
+}
+
+
+/* keyword color */
+.highlight .kn {
+    color: #00b8ff;
+    font-weight: 100;
+}
+
+.highlight .o {
+    color: #9d00ff;
+    font-weight: bold;
+}
+
+.s1,
+.s2 {
+    color: #00ffc4;
+}
+
+/*  */
+
+.jp-MarkdownOutput {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--ftLightPurple);
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.jp-OutputArea-output {
+    background: #292c365c !important;
+    margin: 30px 0;
+    padding: 30px;
+    font-family: 'Space Mono', monospace;
+    overflow-x: auto;
+}
+
+.jp-RenderedImage img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.highlight pre,
+.jp-OutputArea-executeResult pre {
+    background: var(--bgPurple);
+    justify-content: flex-start;
+    margin: 30px 0;
+    padding: 30px;
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    /* letter-spacing: 1px; */
+    line-height: 25px;
+
+    white-space: pre-line;
+    color: #a1a1a1;
+    overflow-x: auto;
+}
+
+.jp-OutputArea-executeResult pre {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+
+.jp-OutputArea-executeResult table {
+    border-collapse: collapse;
+    background: #00000052;
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    /* letter-spacing: 1px; */
+    line-height: 25px;
+    color: #a1a1a1;
+}
+
+.jp-OutputArea-executeResult thead,
+.jp-OutputArea-executeResult tr:nth-child(even) {
+    background: #0000008f;
+}
+
+.jp-OutputArea-executeResult th,
+.jp-OutputArea-executeResult td {
+    min-width: 100px;
+    padding: 5px;
+    text-align: center !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.jp-OutputArea-executeResult th:nth-child(1) {
+    min-width: 40px;
+    font-weight: 100;
+}

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 
 .page_header_wrap {
@@ -53,9 +53,48 @@
 }
 
 
+
+.page_header_breadcrumb_con {
+    margin-top: 20px;
+    /* position: absolute;
+    bottom: 35px;
+    left: 35px; */
+    color: var(--fullDark);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.page_header_breadcrumb {
+    text-transform: capitalize;
+    transition: all 0.2s ease-in-out;
+}
+
+.page_header_breadcrumb:hover {
+    color: #ffffff;
+}
+
+.page_header_breadcrumb_active {
+    color: #a1a1a1 !important;
+    cursor: text !important;
+}
+
+/*  */
+
+
+
+
+.page_main_wrapper {
+    position: relative;
+}
+
+.page_main_con {
+    align-items: flex-start;
+}
+
 .page_topic_con,
 .page_dataset_con,
 .page_intro_con,
+.page_jupyterNotebook_con,
 .page_author_con {
     padding: 50px;
     /* padding-bottom: 0; */
@@ -64,6 +103,14 @@
 
 .page_topic_con {
     padding-bottom: 0px;
+}
+
+.page_intro_con {
+    padding-bottom: 0;
+}
+
+.page_jupyterNotebook_con {
+    padding-top: 0;
 }
 
 .page_topic_mini_header,
@@ -85,6 +132,84 @@
     margin-bottom: 30px;
     font-family: 'Share Tech Mono', monospace;
     font-size: 30px;
+}
+
+.page_article_info_con {
+    background: var(--bgPurple);
+    width: 350px;
+    margin: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.page_article_id_topic {
+    background: #110e12;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.page_article_id_pubDate {
+    font-size: 12px;
+}
+
+.page_article_info_topic,
+.page_article_info_tag_wrap,
+.page_article_info_author {
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.page_article_info_author {
+    padding-bottom: 30px;
+}
+
+.page_article_info_topic_title,
+.page_article_info_tag_title,
+.page_article_info_author_title {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.page_article_info_topic_text {
+    /* margin-bottom: 30px; */
+    font-size: 14px;
+}
+
+.page_article_info_tag_con {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.page_article_info_tag {
+    background: var(--fullDark);
+    padding: 8px 15px;
+    margin: 5px;
+    margin-left: 0;
+    font-size: 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.page_article_info_tag:hover {
+    background: var(--ftPurple);
+    color: var(--fullDark);
+}
+
+.page_article_info_author {
+    font-size: 14px;
+}
+
+.page_article_info_author_name {
+    justify-content: flex-start;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.page_article_info_author_name img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    object-fit: cover;
+    border-radius: 50px;
 }
 
 .page_topic_header {
@@ -117,7 +242,7 @@
     font-family: 'Share Tech Mono', monospace;
     color: var(--ftLightPurple);
     font-weight: 100;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 25px;
 }
 

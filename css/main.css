@@ -8,7 +8,7 @@
     /* height: 114px; */
     padding: 35px 50px;
     justify-content: space-between;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(20px);
 
     z-index: 999999;
 }
@@ -336,14 +336,3 @@
 .myPortfolio_link:hover {
     color: #71fcaa;
 }
-
-
-
-
-
-
-
-
-
-
-
