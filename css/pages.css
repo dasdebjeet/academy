@@ -88,6 +88,7 @@
 }
 
 .page_main_con {
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
