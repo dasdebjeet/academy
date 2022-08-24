@@ -204,8 +204,11 @@
 /* categories */
 
 .categories_label_wrap {
+    position: relative;
     padding: 50px;
+    padding-bottom: 160px;
     /* color: var(--ftPurple); */
+    flex-direction: column;
 }
 
 .categories_label_wrap_title {
@@ -260,6 +263,24 @@
 
 .categories_label_subRight_subTitle {
     font-size: 12px;
+}
+
+
+.categories_con_more_btn {
+    position: absolute;
+    bottom: 0%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background: var(--bgPurple);
+    width: 200px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.categories_con_more_btn:hover {
+    opacity: 0.8;
 }
 
 /* about */

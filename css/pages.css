@@ -92,6 +92,11 @@
     align-items: flex-start;
 }
 
+
+.page_main_con_subLeft {
+    width: calc(100% - 350px);
+}
+
 .page_topic_con,
 .page_dataset_con,
 .page_intro_con,
@@ -146,6 +151,7 @@
 .page_article_id_topic {
     background: #110e12;
     padding: 30px;
+    letter-spacing: 1px;
     font-size: 20px;
 }
 

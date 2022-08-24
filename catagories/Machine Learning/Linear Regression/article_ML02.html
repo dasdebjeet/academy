@@ -59,7 +59,15 @@
                 window.location.replace("../../../error.html");
             }
 
+
+            // chnage the document title
+            var doc_title = (url_arr[url_arr.length - 1].split("."))[0]
+            var doc_title = doc_title.split("_")
+            var title = doc_title[0][0].toUpperCase() + doc_title[0].substring(1).toLowerCase();
+            $(document).prop('title', "Academy - " + article_obj.article[json_fliter_artId_index].article_tags[0] + " -- " + title + "_" + doc_title[1]);
+
         </script>
+
 
 
 
@@ -75,7 +83,7 @@
             </div>
 
             <div class="navbar_menu_con flexc">
-                <a class="navbar_menu" href="">Catagories</a><i class="fas fa-circle"></i>
+                <a class="navbar_menu" href="catagories.html">Catagories</a><i class="fas fa-circle"></i>
                 <a class="navbar_menu" href="">About</a><i class="fas fa-circle"></i>
                 <a class="navbar_menu" href="">Team</a><i class="fas fa-circle"></i>
                 <a class="navbar_menu" href="">Support</a>
