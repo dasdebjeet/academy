@@ -2,7 +2,205 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width:481px),
-screen and (max-width: 600px) {}
+screen and (max-width: 600px) {
+    .navbar_con {
+        padding: 35px 30px;
+    }
+
+    .navbar_menu_con {
+        display: none;
+    }
+
+    .main_header_wrap {
+        background: url('../assests/dataScience.gif') no-repeat;
+        background-size: 600%;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+        min-height: calc(100vh - 114px);
+    }
+
+
+    .main_header_con {
+        background: transparent;
+        width: 100%;
+        min-height: calc(100vh - 114px);
+        padding: 30px;
+        padding-top: 150px;
+        backdrop-filter: blur(150px);
+    }
+
+    .main_header_title {
+        margin-bottom: 50px;
+        color: var(--ftPurple);
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 55px;
+        /* line-height: 25px; */
+        /* background: url("../assests/dataScience.gif");
+        background-size: 50%;
+        -webkit-background-clip: text; */
+        /* -webkit-text-fill-color: #0000; */
+        /* animation: imagebulger 5s infinite; */
+        color: aliceblue;
+    }
+
+    .main_header_subtitle {
+        margin-bottom: 150px;
+        font-size: 17px;
+    }
+
+    /*  */
+
+    .main_intro_con {
+        flex-direction: column;
+    }
+
+    .main_intro_sub {
+        width: 100% !important;
+    }
+
+    .main_intro_subLeft {
+        padding: 30px;
+    }
+
+    .main_intro_subRight_cardCon {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .subRight_card {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        width: 100%;
+        height: 250px;
+    }
+
+    .subRight_card_active {
+        transform: scale(1.05);
+    }
+
+    .categories_label_wrap {
+        padding: 30px;
+        padding-bottom: 160px;
+    }
+
+    .categories_label_con {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+    }
+
+    .categories_label {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 200px;
+    }
+
+    .categories_label_subLeft {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 30px;
+    }
+
+    .categories_con_more_btn {
+        justify-content: space-between;
+
+        padding: 20px 65px;
+
+    }
+
+
+    .footer_con {
+        /* display: none; */
+    }
+
+    .footer1_con {
+        flex-direction: column;
+        padding: 30px;
+        padding-bottom: 0;
+    }
+
+    .footer1_sec1 {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .footer1_sec2_con {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .footer1_sec2,
+    .footer1_sec3 {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .footer1_sec_title {
+        margin-bottom: 30px;
+    }
+
+    /*  */
+
+
+    /* catagories */
+    .catagories_page_wrap {
+        padding: 30px;
+    }
+
+    /* page */
+    .page_header_wrap {
+        min-height: 300px;
+    }
+
+    .page_header_con>h1 {
+        width: 100%;
+        padding-top: 80px;
+        font-family: 'exan', Fallback, sans-serif;
+        font-size: 65px;
+    }
+
+
+
+    .page_header_breadcrumb_con {
+        padding: 0 30px;
+    }
+
+    /*  article pages */
+    .page_main_con {
+        flex-direction: column-reverse;
+    }
+
+    .page_main_con_subLeft {
+        width: 100%;
+    }
+
+    .page_main_con_subRight {
+        width: 100%;
+        /* padding: 50px 30px; */
+    }
+
+    .page_article_info_con {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .page_topic_con,
+    .page_dataset_con,
+    .page_intro_con,
+    .page_jupyterNotebook_con,
+    .page_author_con {
+        padding: 30px;
+    }
+
+    .page_intro_con {
+        padding-bottom: 0;
+    }
+
+    .jp-MarkdownCell {
+        margin-top: 0 !important;
+    }
+}
 
 @media only screen and (max-width: 600px) {}
 

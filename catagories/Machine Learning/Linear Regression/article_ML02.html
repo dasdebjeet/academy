@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Academy - Linear Regression -- Article_ML01</title>
+        <title>Academy - Linear Regression -- Article_XXXX</title>
 
 
         <!-- CSS -->
@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../../../css/main.css">
         <link rel="stylesheet" href="../../../css/pages.css">
         <link rel="stylesheet" href="../../../css/jupyter_style.css">
+        <link rel="stylesheet" href="../../../css/mquery.css">
 
 
         <!-- FontAwesome -->
@@ -29,46 +30,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <script src="../../../js/article_data.js"></script>
-
-        <script>
-            const art_json = JSON.stringify(article_data);
-            let article_obj = JSON.parse(art_json);
-
-            var url = window.location.href
-            var url_arr = url.split("/")
-
-            var url_article_id = (url_arr[url_arr.length - 1].split("."))[0]
-            url_article_id = url_article_id.split("_")[1]
-
-            // If the article code given in the filename dosent match with the article id the page wont load
-            var json_fliter_article_id = (url_article_id) => {
-                for (var i = 0; i < article_obj.article.length; i++) {
-                    if (article_obj.article[i].article_id == url_article_id) {
-
-                        // console.log(i)
-                        return i;
-                    }
-                }
-                return null;
-            }
-
-            // var result = art_json.filter(obj => obj.article[0].article_id == url_article_id);
-            var json_fliter_artId_index = json_fliter_article_id(url_article_id);
-
-            if (json_fliter_artId_index == null) {
-                window.location.replace("../../../error.html");
-            }
-
-
-            // chnage the document title
-            var doc_title = (url_arr[url_arr.length - 1].split("."))[0]
-            var doc_title = doc_title.split("_")
-            var title = doc_title[0][0].toUpperCase() + doc_title[0].substring(1).toLowerCase();
-            $(document).prop('title', "Academy - " + article_obj.article[json_fliter_artId_index].article_tags[0] + " -- " + title + "_" + doc_title[1]);
-
-        </script>
-
-
+        <script src="../../../js/article_redirect.js"></script>
 
 
     </head>
@@ -83,7 +45,7 @@
             </div>
 
             <div class="navbar_menu_con flexc">
-                <a class="navbar_menu" href="catagories.html">Catagories</a><i class="fas fa-circle"></i>
+                <a class="navbar_menu" href="../../../catagories.html">Catagories</a><i class="fas fa-circle"></i>
                 <a class="navbar_menu" href="">About</a><i class="fas fa-circle"></i>
                 <a class="navbar_menu" href="">Team</a><i class="fas fa-circle"></i>
                 <a class="navbar_menu" href="">Support</a>
@@ -594,47 +556,56 @@
 
             </div>
 
-            <div class="footer2_con">
-                Made with <i class="fas fa-heart" style="font-size: 10px; margin: 0 5px;"></i> by <a href="https://dasdebjeet.github.io" class="myPortfolio_link">DebjeetDas</a>. © 2022 all rights reserved.
+            <div class="footer_con">
+                <div class="footer1_con flexc">
+                    <div class="footer1_sec1">
+                        <div class="navbarMobile_menu siteLogo myImg flexc">
+                            <a>
+                                <strong style="color:#ffffff">Debjeet</strong>Das.
+                                <span class="siteLogo_subscript">ACADEMY</span>
+                            </a>
+                        </div>
+                        <p class="footer1_sec1_content">DebjeetDas Academy is a learning site that provides hundreds of a articles related about coding and computer science with experienced students and coders.</p>
+                    </div>
+
+                    <div class="footer1_sec2_con flexc">
+                        <div class="footer1_sec2">
+                            <div class="footer1_sec_title footer1_sec2_title">Careers</div>
+                            <div class="footer1_sec_links_con">
+                                <a href="" class="footer1_sec_links">Blog</a>
+                                <a href="" class="footer1_sec_links">Help and Support</a>
+                            </div>
+                        </div>
+
+                        <div class="footer1_sec3">
+                            <div class="footer1_sec_title footer1_sec2_title">Terms</div>
+                            <div class="footer1_sec_links_con">
+                                <a href="" class="footer1_sec_links">Privacy Policy</a>
+                                <a href="" class="footer1_sec_links">Cookie Settings</a>
+                            </div>
+                        </div>
+
+                        <div class="footer1_sec3">
+                            <div class="footer1_sec_title footer1_sec2_title">Address</div>
+                            <div class="footer1_sec_links_con">
+                                N. S. C Bose Road, Mahamayatala,<br>
+                                Kolkata, WB, India
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footer2_con">
+                    Made with <i class="fas fa-heart" style="font-size: 10px; margin: 0 5px; color: #71fcaa;"></i> by <a href="https://dasdebjeet.github.io" class="myPortfolio_link">DebjeetDas</a>. © 2022 all rights reserved.
+                </div>
             </div>
         </div>
 
         </div>
 
 
-
-
-        <script>
-            var breadcrumb_arr = ['Home']
-            for (var i = 0; i < url_arr.length; i++) {
-                if (i > 3 && i != url_arr.length - 1) breadcrumb_arr.push(url_arr[i].replace("%20", " "))
-                if (i == url_arr.length - 1) breadcrumb_arr.push((url_arr[i].split("."))[0])
-            }
-
-
-            for (var k = 0; k < breadcrumb_arr.length; k++) {
-                if (k != breadcrumb_arr.length - 1)
-                    $(".page_header_breadcrumb_con").append('<a class="page_header_breadcrumb" href="">' + breadcrumb_arr[k] + '</a> / ')
-                else
-                    $(".page_header_breadcrumb_con").append('<a class="page_header_breadcrumb page_header_breadcrumb_active">' + breadcrumb_arr[k] + '</a>')
-
-            }
-
-            $(".page_topic_header").text(article_obj.article[json_fliter_artId_index].article_name)
-            $(".page_article_info_topic_text").text(article_obj.article[json_fliter_artId_index].article_name)
-
-            $(".page_article_id_topic_title").text("Article ID: " + article_obj.article[json_fliter_artId_index].article_id)
-            $(".page_article_id_pubDate").text("Published on: " + article_obj.article[json_fliter_artId_index].article_published_date)
-
-            $(".page_article_info_tag_con").html("")
-            for (var j = 0; j < article_obj.article[json_fliter_artId_index].article_tags.length; j++) {
-                $(".page_article_info_tag_con").append('<a href="" class="page_article_info_tag">' + article_obj.article[json_fliter_artId_index].article_tags[j] + '</a>')
-            }
-
-            $(".page_article_info_author_name").html(article_obj.article[json_fliter_artId_index].author + ' <img src="../../../assests/author/' + article_obj.article[json_fliter_artId_index].author_image_name + '">')
-            $(".page_author_name").html('by ' + article_obj.article[json_fliter_artId_index].author + ' <img src="../../../assests/author/' + article_obj.article[json_fliter_artId_index].author_image_name + '" class="page_author_img">')
-
-        </script>
+        <script src="../../../js/article_info_load.js"></script>
 
     </body>
 

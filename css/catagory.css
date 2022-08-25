@@ -1,0 +1,66 @@
+.catagories_page_wrap {
+    padding: 50px;
+}
+
+
+.catagories_page_wrap_title {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.catagories_page_con {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 50px;
+    width: 100%;
+}
+
+.catagories_page_card_con {
+    position: relative;
+    background: var(--bgPurple);
+    width: 100%;
+    height: 190px;
+    padding: 25px 0 25px 42px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 5px 5px 10px #00000082;
+    overflow: hidden;
+}
+
+.catagories_page_card_con:hover {
+    transform: scale(1.1);
+}
+
+.catagories_page_card_article_info {
+    background: #0f0d10;
+    position: absolute;
+    top: 75px;
+    left: -76px;
+    width: 192px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px dashed var(--ftLightPurple);
+    transform: rotate(270deg);
+}
+
+.catagories_page_card_title {
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+.catagories_page_card_author {
+    margin: 5px 20px 20px;
+    padding: 10px 0;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.catagories_page_card_catagory {
+    background: var(--fullDark);
+    width: fit-content;
+    margin: 0 20px;
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 8px;
+}

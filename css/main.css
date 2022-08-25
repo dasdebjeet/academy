@@ -267,13 +267,14 @@
 
 
 .categories_con_more_btn {
+    justify-content: space-between;
     position: absolute;
     bottom: 0%;
     right: 50%;
     transform: translate(50%, -50%);
     background: var(--bgPurple);
     width: 200px;
-    padding: 20px;
+    padding: 20px 65px;
     font-size: 18px;
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
@@ -316,6 +317,10 @@
 
 }
 
+.footer1_sec1 {
+    width: 40%;
+}
+
 .footer1_sec1_content {
     margin-top: 50px;
     font-size: 18px;
@@ -338,6 +343,7 @@
 
 .footer1_sec_links {
     display: block;
+    width: fit-content;
     font-size: 15px;
 }
 
