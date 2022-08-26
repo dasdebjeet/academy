@@ -147,6 +147,26 @@ screen and (max-width: 600px) {
         padding: 30px;
     }
 
+    .page_pagination_con {
+        margin: 50px 0 100px;
+        padding: 0 30px;
+    }
+
+    .page_pagination_wrap {
+        width: 100%;
+    }
+
+    .page_pagination_btn {
+        padding: 8px 15px;
+    }
+
+    .page_pagination_num {
+        padding: 10px 5px;
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
+
     /* page */
     .page_header_wrap {
         min-height: 300px;
