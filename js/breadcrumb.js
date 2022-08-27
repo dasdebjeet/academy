@@ -3,8 +3,13 @@ for (const breadcrumb_link of breadcrumb_links) {
     breadcrumb_link.addEventListener('click', (e) => {
         e.preventDefault()
         var link = $(breadcrumb_link).text()
-        link = link.toLowerCase().replace(" ", "")
-        // console.log(link)
+        var link_arr = link.split(" ")
+
+
+        for (var i = 0; i < link_arr.length; i++) {
+            if (i == 0) link = link_arr[i].toLowerCase()
+            else link += link_arr[i]
+        }
 
         if (link == "catagories") {
             window.location.replace("../../../catagories.html");
