@@ -30,6 +30,10 @@
     font-weight: bold;
 }
 
+.highlight .k {
+    color: #ff8d00;
+}
+
 .s1,
 .s2 {
     color: #00ffc4;
@@ -54,6 +58,8 @@
     overflow-x: auto;
 }
 
+
+.jp-MarkdownCell img,
 .jp-RenderedImage img {
     /* max-width: 100%; */
     object-fit: cover;

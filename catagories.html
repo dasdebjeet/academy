@@ -214,6 +214,21 @@
                 }
             }
 
+
+            var breadcrumb_links = document.querySelectorAll(".page_header_breadcrumb")
+            for (const breadcrumb_link of breadcrumb_links) {
+                breadcrumb_link.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    var link = $(breadcrumb_link).text()
+                    link = link.toLowerCase().replace(" ", "%20")
+                    // console.log(link)
+
+                    if (link == "home") {
+                        window.location.replace("./index.html");
+                    }
+                })
+            }
+
         </script>
     </body>
 

@@ -74,20 +74,17 @@
 
                     <div class="page_dataset_con">
                         <div class="page_dataset_mini_header">Dataset</div>
-                        <a href="https://github.com/dasdebjeet/data_science/blob/main/datasets/homeprices.csv" class="page_dataset_link" target="_blank">Home Prices <i class="fal fa-link"></i></a>
+                        <a href="https://github.com/dasdebjeet/data_science/blob/main/datasets/hiring.csv" class="page_dataset_link" target="_blank">Hiring <i class="fal fa-link"></i></a>
                     </div>
 
 
                     <div class="page_intro_con">
                         <div class="page_intro_mini_header">Introduction</div>
                         <div class="page_intro_header">What we will do?</div>
-
-
                     </div>
 
                     <!-- jupyter code -->
                     <div class="page_jupyterNotebook_con">
-
                         <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
                             <div class="jp-Cell-inputWrapper">
                                 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -96,7 +93,7 @@
                                     <div class="jp-InputPrompt jp-InputArea-prompt">
                                     </div>
                                     <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-                                        <p>In this article we will learn how to use the Linear Regression and predict the price of houses from area, bedrooms and age using the canada per capita income dataset.</p>
+                                        <p>Let use the Linear Regression model and predict the salary of a employee from his experience, test score and interveiw score</p>
 
                                     </div>
                                 </div>
@@ -110,7 +107,7 @@
                                     <div class="jp-InputPrompt jp-InputArea-prompt">
                                     </div>
                                     <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-                                        <p>First we will import all the necessary modules</p>
+                                        <p>First import the modules</p>
 
                                     </div>
                                 </div>
@@ -125,11 +122,11 @@
                                     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                                         <div class="CodeMirror cm-s-jupyter">
                                             <div class=" highlight hl-ipython3">
-                                                <pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-    <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
-    </pre>
+                                                <pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+                            <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+                            <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+                            <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+                            </pre>
                                             </div>
 
                                         </div>
@@ -146,7 +143,149 @@
                                     <div class="jp-InputPrompt jp-InputArea-prompt">
                                     </div>
                                     <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-                                        <p>Then load the home price dataset</p>
+                                        <p>Load the hiring dataset</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+                            <div class="jp-Cell-inputWrapper">
+                                <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+                                </div>
+                                <div class="jp-InputArea jp-Cell-inputArea">
+                                    <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+                                    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                                        <div class="CodeMirror cm-s-jupyter">
+                                            <div class=" highlight hl-ipython3">
+                                                <pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;E:\Data Science\datasets\hiring.csv&quot;</span><span class="p">)</span>
+                            <span class="n">df</span>
+                            </pre>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jp-Cell-outputWrapper">
+                                <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+                                </div>
+
+
+                                <div class="jp-OutputArea jp-Cell-outputArea">
+
+                                    <div class="jp-OutputArea-child">
+
+
+                                        <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+
+
+
+                                        <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+                                            <div>
+                                                <style scoped>
+                                                    .dataframe tbody tr th:only-of-type {
+                                                        vertical-align: middle;
+                                                    }
+
+                                                    .dataframe tbody tr th {
+                                                        vertical-align: top;
+                                                    }
+
+                                                    .dataframe thead th {
+                                                        text-align: right;
+                                                    }
+
+                                                </style>
+                                                <table border="1" class="dataframe">
+                                                    <thead>
+                                                        <tr style="text-align: right;">
+                                                            <th></th>
+                                                            <th>experience</th>
+                                                            <th>test_score(out of 10)</th>
+                                                            <th>interview_score(out of 10)</th>
+                                                            <th>salary($)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>0</th>
+                                                            <td>NaN</td>
+                                                            <td>8.0</td>
+                                                            <td>9</td>
+                                                            <td>50000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>1</th>
+                                                            <td>NaN</td>
+                                                            <td>8.0</td>
+                                                            <td>6</td>
+                                                            <td>45000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>2</th>
+                                                            <td>five</td>
+                                                            <td>6.0</td>
+                                                            <td>7</td>
+                                                            <td>60000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>3</th>
+                                                            <td>two</td>
+                                                            <td>10.0</td>
+                                                            <td>10</td>
+                                                            <td>65000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>4</th>
+                                                            <td>seven</td>
+                                                            <td>9.0</td>
+                                                            <td>6</td>
+                                                            <td>70000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>5</th>
+                                                            <td>three</td>
+                                                            <td>7.0</td>
+                                                            <td>10</td>
+                                                            <td>62000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>6</th>
+                                                            <td>ten</td>
+                                                            <td>NaN</td>
+                                                            <td>7</td>
+                                                            <td>72000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>7</th>
+                                                            <td>eleven</td>
+                                                            <td>7.0</td>
+                                                            <td>8</td>
+                                                            <td>80000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+                            <div class="jp-Cell-inputWrapper">
+                                <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+                                </div>
+                                <div class="jp-InputArea jp-Cell-inputArea">
+                                    <div class="jp-InputPrompt jp-InputArea-prompt">
+                                    </div>
+                                    <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+                                        <p>Getting the mean of the test score and filling up the NaN values</p>
 
                                     </div>
                                 </div>
@@ -161,9 +300,11 @@
                                     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                                         <div class="CodeMirror cm-s-jupyter">
                                             <div class=" highlight hl-ipython3">
-                                                <pre><span></span><span class="n">df</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;E:\Data Science\datasets\homeprices.csv&quot;</span><span class="p">)</span>
-    <span class="n">df</span>
-    </pre>
+                                                <pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+                            <span class="n">tScore_median</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;test_score(out of 10)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+                            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;test_score(out of 10)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;test_score(out of 10)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">tScore_median</span><span class="p">)</span>
+                            <span class="n">df</span>
+                            </pre>
                                             </div>
 
                                         </div>
@@ -205,54 +346,68 @@
                                                     <thead>
                                                         <tr style="text-align: right;">
                                                             <th></th>
-                                                            <th>area</th>
-                                                            <th>bedrooms</th>
-                                                            <th>age</th>
-                                                            <th>price</th>
+                                                            <th>experience</th>
+                                                            <th>test_score(out of 10)</th>
+                                                            <th>interview_score(out of 10)</th>
+                                                            <th>salary($)</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <th>0</th>
-                                                            <td>2600</td>
-                                                            <td>3.0</td>
-                                                            <td>20</td>
-                                                            <td>550000</td>
+                                                            <td>NaN</td>
+                                                            <td>8.0</td>
+                                                            <td>9</td>
+                                                            <td>50000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>1</th>
-                                                            <td>3000</td>
-                                                            <td>4.0</td>
-                                                            <td>15</td>
-                                                            <td>565000</td>
+                                                            <td>NaN</td>
+                                                            <td>8.0</td>
+                                                            <td>6</td>
+                                                            <td>45000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>2</th>
-                                                            <td>3200</td>
-                                                            <td>NaN</td>
-                                                            <td>18</td>
-                                                            <td>610000</td>
+                                                            <td>five</td>
+                                                            <td>6.0</td>
+                                                            <td>7</td>
+                                                            <td>60000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>3</th>
-                                                            <td>3600</td>
-                                                            <td>3.0</td>
-                                                            <td>30</td>
-                                                            <td>595000</td>
+                                                            <td>two</td>
+                                                            <td>10.0</td>
+                                                            <td>10</td>
+                                                            <td>65000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>4</th>
-                                                            <td>4000</td>
-                                                            <td>5.0</td>
-                                                            <td>8</td>
-                                                            <td>760000</td>
+                                                            <td>seven</td>
+                                                            <td>9.0</td>
+                                                            <td>6</td>
+                                                            <td>70000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>5</th>
-                                                            <td>4100</td>
-                                                            <td>6.0</td>
+                                                            <td>three</td>
+                                                            <td>7.0</td>
+                                                            <td>10</td>
+                                                            <td>62000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>6</th>
+                                                            <td>ten</td>
+                                                            <td>8.0</td>
+                                                            <td>7</td>
+                                                            <td>72000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>7</th>
+                                                            <td>eleven</td>
+                                                            <td>7.0</td>
                                                             <td>8</td>
-                                                            <td>810000</td>
+                                                            <td>80000</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -274,21 +429,7 @@
                                     <div class="jp-InputPrompt jp-InputArea-prompt">
                                     </div>
                                     <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-                                        <p>While most machine learning algorithms only work with numeric values, many important real-world features are not numeric but rather categorical. As categorical features, they take on levels or values. These can be represented as various categories such as age, state, or customer type for example.</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-                            <div class="jp-Cell-inputWrapper">
-                                <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-                                </div>
-                                <div class="jp-InputArea jp-Cell-inputArea">
-                                    <div class="jp-InputPrompt jp-InputArea-prompt">
-                                    </div>
-                                    <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-                                        <p>So, now we have to remove the NaN from the bedroom coloumn so what we will do is that, get the median value of the whole bedroom coloumn and replace it with NaN values in it</p>
+                                        <p>Now as we can see that the experience coloum are on aphabetical values. So we will convert it in the numerical values by using the word2number module of python</p>
 
                                     </div>
                                 </div>
@@ -303,11 +444,13 @@
                                     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                                         <div class="CodeMirror cm-s-jupyter">
                                             <div class=" highlight hl-ipython3">
-                                                <pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-    <span class="n">bedrooms_median</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">bedrooms</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">bedrooms</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">bedrooms</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">bedrooms_median</span><span class="p">)</span> <span class="c1"># fill all NaN positions with the median value</span>
-    <span class="n">df</span>
-    </pre>
+                                                <pre><span></span><span class="kn">from</span> <span class="nn">word2number</span> <span class="kn">import</span> <span class="n">w2n</span>
+                            
+                            <span class="n">df</span><span class="o">.</span><span class="n">experience</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">experience</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;zero&quot;</span><span class="p">)</span>
+                            <span class="n">df</span><span class="o">.</span><span class="n">experience</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">experience</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">w2n</span><span class="o">.</span><span class="n">word_to_num</span><span class="p">)</span>
+                                    
+                            <span class="n">df</span>
+                            </pre>
                                             </div>
 
                                         </div>
@@ -349,54 +492,68 @@
                                                     <thead>
                                                         <tr style="text-align: right;">
                                                             <th></th>
-                                                            <th>area</th>
-                                                            <th>bedrooms</th>
-                                                            <th>age</th>
-                                                            <th>price</th>
+                                                            <th>experience</th>
+                                                            <th>test_score(out of 10)</th>
+                                                            <th>interview_score(out of 10)</th>
+                                                            <th>salary($)</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <th>0</th>
-                                                            <td>2600</td>
-                                                            <td>3.0</td>
-                                                            <td>20</td>
-                                                            <td>550000</td>
+                                                            <td>0</td>
+                                                            <td>8.0</td>
+                                                            <td>9</td>
+                                                            <td>50000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>1</th>
-                                                            <td>3000</td>
-                                                            <td>4.0</td>
-                                                            <td>15</td>
-                                                            <td>565000</td>
+                                                            <td>0</td>
+                                                            <td>8.0</td>
+                                                            <td>6</td>
+                                                            <td>45000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>2</th>
-                                                            <td>3200</td>
-                                                            <td>4.0</td>
-                                                            <td>18</td>
-                                                            <td>610000</td>
+                                                            <td>5</td>
+                                                            <td>6.0</td>
+                                                            <td>7</td>
+                                                            <td>60000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>3</th>
-                                                            <td>3600</td>
-                                                            <td>3.0</td>
-                                                            <td>30</td>
-                                                            <td>595000</td>
+                                                            <td>2</td>
+                                                            <td>10.0</td>
+                                                            <td>10</td>
+                                                            <td>65000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>4</th>
-                                                            <td>4000</td>
-                                                            <td>5.0</td>
-                                                            <td>8</td>
-                                                            <td>760000</td>
+                                                            <td>7</td>
+                                                            <td>9.0</td>
+                                                            <td>6</td>
+                                                            <td>70000</td>
                                                         </tr>
                                                         <tr>
                                                             <th>5</th>
-                                                            <td>4100</td>
-                                                            <td>6.0</td>
+                                                            <td>3</td>
+                                                            <td>7.0</td>
+                                                            <td>10</td>
+                                                            <td>62000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>6</th>
+                                                            <td>10</td>
+                                                            <td>8.0</td>
+                                                            <td>7</td>
+                                                            <td>72000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>7</th>
+                                                            <td>11</td>
+                                                            <td>7.0</td>
                                                             <td>8</td>
-                                                            <td>810000</td>
+                                                            <td>80000</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -418,7 +575,7 @@
                                     <div class="jp-InputPrompt jp-InputArea-prompt">
                                     </div>
                                     <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-                                        <p>Let start with training the Regression model</p>
+                                        <p>Train our linear model</p>
 
                                     </div>
                                 </div>
@@ -429,13 +586,13 @@
                                 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
                                 </div>
                                 <div class="jp-InputArea jp-Cell-inputArea">
-                                    <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+                                    <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
                                     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                                         <div class="CodeMirror cm-s-jupyter">
                                             <div class=" highlight hl-ipython3">
                                                 <pre><span></span><span class="n">reg</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-    <span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;bedrooms&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="p">)</span>
-    </pre>
+                            <span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;experience&#39;</span><span class="p">,</span> <span class="s1">&#39;test_score(out of 10)&#39;</span><span class="p">,</span> <span class="s1">&#39;interview_score(out of 10)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;salary($)&#39;</span><span class="p">]])</span>
+                            </pre>
                                             </div>
 
                                         </div>
@@ -453,7 +610,7 @@
                                     <div class="jp-OutputArea-child">
 
 
-                                        <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+                                        <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -477,7 +634,7 @@
                                     <div class="jp-InputPrompt jp-InputArea-prompt">
                                     </div>
                                     <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-                                        <p>Predict the house price which has a area of 3000 sqft, bedroom of 3 and age limit of 40</p>
+                                        <p>Let do some prediction using the employee experience, test score and interveiw score</p>
 
                                     </div>
                                 </div>
@@ -488,12 +645,56 @@
                                 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
                                 </div>
                                 <div class="jp-InputArea jp-Cell-inputArea">
+                                    <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+                                    <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                                        <div class="CodeMirror cm-s-jupyter">
+                                            <div class=" highlight hl-ipython3">
+                                                <pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+                            </pre>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jp-Cell-outputWrapper">
+                                <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+                                </div>
+
+
+                                <div class="jp-OutputArea jp-Cell-outputArea">
+
+                                    <div class="jp-OutputArea-child">
+
+
+                                        <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+                                        <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+                                            <pre>array([[53205.96797671]])</pre>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+                            <div class="jp-Cell-inputWrapper">
+                                <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+                                </div>
+                                <div class="jp-InputArea jp-Cell-inputArea">
                                     <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
                                     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                                         <div class="CodeMirror cm-s-jupyter">
                                             <div class=" highlight hl-ipython3">
-                                                <pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">40</span><span class="p">]])</span>
-    </pre>
+                                                <pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">]])</span>
+                            </pre>
                                             </div>
 
                                         </div>
@@ -517,7 +718,7 @@
 
 
                                         <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-                                            <pre>array([498408.25158031])</pre>
+                                            <pre>array([[92002.18340611]])</pre>
                                         </div>
 
                                     </div>
@@ -535,7 +736,7 @@
                                     <div class="jp-InputPrompt jp-InputArea-prompt">
                                     </div>
                                     <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-                                        <p>We can also predict the house price which has a area of 2500 sqft, bedroom of 4 and age limit of 5</p>
+                                        <p>Accuracy of our model</p>
 
                                     </div>
                                 </div>
@@ -546,12 +747,12 @@
                                 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
                                 </div>
                                 <div class="jp-InputArea jp-Cell-inputArea">
-                                    <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+                                    <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
                                     <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                                         <div class="CodeMirror cm-s-jupyter">
                                             <div class=" highlight hl-ipython3">
-                                                <pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">2500</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
-    </pre>
+                                                <pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;experience&#39;</span><span class="p">,</span> <span class="s1">&#39;test_score(out of 10)&#39;</span><span class="p">,</span> <span class="s1">&#39;interview_score(out of 10)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;salary($)&quot;</span><span class="p">]])</span>
+                            </pre>
                                             </div>
 
                                         </div>
@@ -569,13 +770,13 @@
                                     <div class="jp-OutputArea-child">
 
 
-                                        <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+                                        <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
 
                                         <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-                                            <pre>array([578876.03748933])</pre>
+                                            <pre>0.9616780002577959</pre>
                                         </div>
 
                                     </div>
