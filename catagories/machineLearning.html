@@ -163,13 +163,21 @@
                 breadcrumb_link.addEventListener('click', (e) => {
                     e.preventDefault()
                     var link = $(breadcrumb_link).text()
-                    link = link.toLowerCase().replace(" ", "%20")
-                    // console.log(link)
+                    var link_arr = link.split(" ")
 
-                    if (link == "catagories") {
-                        window.location.replace("../catagories.html");
-                    } else {
-                        window.location.replace("../index.html");
+
+                    for (var i = 0; i < link_arr.length; i++) {
+                        if (i == 0) link = link_arr[i].toLowerCase()
+                        else link += link_arr[i]
+                    }
+
+
+                    if (breadcrumb_arr[breadcrumb_arr.length - 1] != link) {
+                        if (link == "catagories") {
+                            window.location.replace("../catagories.html");
+                        } else {
+                            window.location.replace("../index.html");
+                        }
                     }
                 })
             }
