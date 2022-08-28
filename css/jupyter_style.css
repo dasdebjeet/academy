@@ -38,6 +38,10 @@
     color: #ff8d00;
 }
 
+.highlight .c1 {
+    color: #525252
+}
+
 .s1,
 .s2 {
     color: #00ffc4;
@@ -52,6 +56,10 @@
     font-size: 18px;
     line-height: 25px;
     overflow-x: auto;
+}
+
+.jp-MarkdownOutput img {
+    margin: 0 !important;
 }
 
 .jp-MarkdownOutput ol {
@@ -93,6 +101,10 @@
     overflow-x: auto;
 }
 
+.jp-OutputArea-output pre {
+    margin: 0;
+    padding: 0 30px !important;
+}
 
 .jp-OutputArea-executeResult pre {
     background: transparent;

@@ -64,6 +64,14 @@ var article_data = {
             "author": "Debjeet Das",
             "author_image_name": "author_debjeetdas.jpg",
             "article_published_date": "28.08.2022"
+        }, {
+            "article_id": "ML08",
+            "article_name": "Logistic Regression multiclass classification using with Digits dataset",
+            "article_catagory": "Logistic Regression",
+            "article_tags": ["Logistic Regression", "Machine Learning", "Multiclass classification", "Image data"],
+            "author": "Debjeet Das",
+            "author_image_name": "author_debjeetdas.jpg",
+            "article_published_date": "28.08.2022"
         }
 
     ]
