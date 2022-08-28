@@ -63,7 +63,7 @@ a {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
 }
 
 /* Track */
@@ -75,6 +75,8 @@ a {
 ::-webkit-scrollbar-thumb {
     background: var(--ftLightPurple);
     transition: all 0.2s ease-in-out;
+    width: 5px;
+    border-radius: 15px;
 }
 
 /* Handle on hover */

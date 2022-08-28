@@ -56,6 +56,14 @@ var article_data = {
             "author": "Debjeet Das",
             "author_image_name": "author_debjeetdas.jpg",
             "article_published_date": "27.08.2022"
+        }, {
+            "article_id": "ML07",
+            "article_name": "Logistic Regression using HR Analytics dataset",
+            "article_catagory": "Logistic Regression",
+            "article_tags": ["Logistic Regression", "Machine Learning"],
+            "author": "Debjeet Das",
+            "author_image_name": "author_debjeetdas.jpg",
+            "article_published_date": "28.08.2022"
         }
 
     ]
